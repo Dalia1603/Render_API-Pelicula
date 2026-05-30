@@ -18,6 +18,10 @@ const logger = (req, res, next) => {
 
 app.use(logger);
 
+app.get('/', async (req, res) => {
+res.send('API funcionando...'); 
+});
+
 // Enrutamiento principal
 app.use('/peliculas', rutapeliculas);
 
